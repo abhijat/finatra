@@ -4,7 +4,7 @@
   <title><![CDATA[Finatra]]></title>
   <link href="http://twitter.github.io/finatra/atom.xml" rel="self"/>
   <link href="http://twitter.github.io/finatra/"/>
-  <updated>2017-01-03T10:53:40-08:00</updated>
+  <updated>2017-01-13T10:37:16-08:00</updated>
   <id>http://twitter.github.io/finatra/</id>
   <author>
     <name><![CDATA[Twitter]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing the Release of Finatra 2.7.0]]></title>
+    <link href="http://twitter.github.io/finatra/blog/2017/01/13/finatra-2-dot-7-0-released/"/>
+    <updated>2017-01-13T10:06:54-08:00</updated>
+    <id>http://twitter.github.io/finatra/blog/2017/01/13/finatra-2-dot-7-0-released</id>
+    <content type="html"><![CDATA[<h3>Finatra <a href="https://github.com/twitter/finatra/releases/tag/version-2.7.0">release 2.7.0</a> is available from <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.twitter%22%20AND%20(a%3A%22finatra-http_2.11%22%20OR%20a%3A%22finatra-thrift_2.11%22)%20AND%20v%3A%222.7.0%22">Maven Central</a>.</h3>
+
+<p>This release was done over the holidays. A big thanks to <a href="https://github.com/jcrossley"><strong>@jcrossley</strong></a>!</p>
+
+<p>Some of the changes in this release include:</p>
+
+<ul>
+<li><p><a href="https://github.com/twitter/finatra/commit/f7d617163d6981d779dca66fcc67ddd33c6aa083">Support for Scala&rsquo;s <code>scala.concurrent.Future</code> in the <code>CallbackConverter</code></a>. Now controller callbacks with a return type of <code>scala.concurrent.Future</code> will be converted via a <a href="http://twitter.github.io/util/guide/util-cookbook/futures.html#conversions-between-twitter-s-future-and-scala-s-future">bijection to Twitter&rsquo;s <code>c.t.util.Future</code></a>. Thanks to <a href="https://github.com/virusdave"><strong>@virusdave</strong></a> for the contribution.</p></li>
+<li><p><a href="https://github.com/twitter/finatra/commit/b46e13273e4709e598e5bea5540ff81bf6a1c733">Fix for <code>ResponseBuilder.fileOrIndex</code></a> to verify the requested file actually exists before returning the index. Thanks to <a href="https://github.com/AlexITC"><strong>@AlexITC</strong></a> for the contribution.</p></li>
+<li><p>Support for <a href="https://github.com/twitter/finatra/commit/3ff9dbcd4fbb10b9c8769224c91267d275286ccc">Request forwarding with Controllers</a>. Requests can be now &ldquo;forwarded&rdquo; from one Controller route to another. See the <a href="http://twitter.github.io/finatra/user-guide/build-new-http-server/controller.html#forwarding-requests">user-guide</a> for more information.</p></li>
+<li><p>The <a href="https://github.com/bmc/grizzled-slf4j">grizzled-slf4j</a> and <a href="https://github.com/codingwell/scala-guice">codingwell/scala-guice</a> dependency versions <a href="https://github.com/twitter/finatra/commit/ec57a4b5295148309bc6638a04707141cf26eba6">were updated</a>.</p></li>
+</ul>
+
+
+<p><br/></p>
+
+<p>Please checkout the <a href="https://github.com/twitter/finatra/releases/tag/finatra-2.7.0">Finatra 2.7.0</a> release notes on github for more information.</p>
+
+<p>See the Finatra <a href="https://github.com/twitter/finatra">Github page</a> or checkout our <a href="http://twitter.github.io/finatra/finatra/user-guide">User Guide</a> for more information on getting started.</p>
+
+<p>&ndash; The Finatra Team | <a href="https://groups.google.com/forum/#!forum/finatra-users">forum</a> | <a href="https://twitter.com/finatra">@finatra</a> | <a href="https://gitter.im/twitter/finatra">chat</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Finatra Release 2.6.0 and TechEmpower Round 13 Results!]]></title>
@@ -50,6 +79,10 @@
 <p><a href="https://www.techempower.com/benchmarks/#section=data-r13&amp;hw=ph&amp;test=json&amp;l=4ftbob">https://www.techempower.com/benchmarks/#section=data-r13&amp;hw=ph&amp;test=json&amp;l=4ftbob</a></p>
 
 <p>For more information on Round 13 of the <a href="https://www.techempower.com/benchmarks/">TechEmpower Web Famework Benchmarks</a> see the blog post <a href="https://www.techempower.com/blog/2016/11/16/framework-benchmarks-round-13/">here</a>.</p>
+
+<p>See the Finatra <a href="https://github.com/twitter/finatra">Github page</a> or checkout our <a href="http://twitter.github.io/finatra/finatra/user-guide">User Guide</a> for more information on getting started with Finatra.</p>
+
+<p>&ndash; The Finatra Team | <a href="https://groups.google.com/forum/#!forum/finatra-users">forum</a> | <a href="https://twitter.com/finatra">@finatra</a> | <a href="https://gitter.im/twitter/finatra">chat</a></p>
 ]]></content>
   </entry>
   
@@ -626,69 +659,6 @@ See <a href="https://github.com/twitter/finatra/blob/1.5.1/src/test/scala/com/tw
 </span><span class='line'>  <span class="nt">&lt;version&gt;</span>1.5.1<span class="nt">&lt;/version&gt;</span>
 </span><span class='line'><span class="nt">&lt;/dependency&gt;</span>
 </span></code></pre></td></tr></table></div></figure></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Finatra 1.5.0 Released]]></title>
-    <link href="http://twitter.github.io/finatra/blog/2014/01/06/finatra-1-dot-5-0-released/"/>
-    <updated>2014-01-06T08:29:18-08:00</updated>
-    <id>http://twitter.github.io/finatra/blog/2014/01/06/finatra-1-dot-5-0-released</id>
-    <content type="html"><![CDATA[<p><p class="lead">This is the first release to be dual published for scala 2.9.x and 2.10.x, as such the <code>artifactId</code> has changed from finatra to <code>finatra_2.9.2</code> or <code>finatra_2.10</code>, respectively.</p>
-
-<h4>SBT</h4>
-
-<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="s">&quot;com.twitter&quot;</span> <span class="o">%%</span> <span class="s">&quot;finatra&quot;</span> <span class="o">%</span> <span class="s">&quot;1.5.0&quot;</span>
-</span></code></pre></td></tr></table></div></figure></p>
-
-<h4>Maven</h4>
-
-<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;dependency&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;groupId&gt;</span>com.twitter<span class="nt">&lt;/groupId&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;artifactId&gt;</span>finatra_2.10<span class="nt">&lt;/artifactId&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;version&gt;</span>1.5.0<span class="nt">&lt;/version&gt;</span>
-</span><span class='line'><span class="nt">&lt;/dependency&gt;</span>
-</span></code></pre></td></tr></table></div></figure></p>
-
-<h3>Download</h3>
-
-<p><a href="https://github.com/twitter/finatra/archive/1.5.0a.zip">https://github.com/twitter/finatra/archive/1.5.0a.zip</a></p>
-
-<p><br></p>
-
-<h2>Header API change</h2>
-
-<p><p class="lead">
-There is a breaking change in the way <code>request.headers</code> are accessed: it now returns an <a href="http://netty.io/3.8/api/org/jboss/netty/handler/codec/http/HttpHeaders.html">HttpHeaders</a> object instead of the previous <a href="https://github.com/twitter/finagle/blob/master/finagle-http/src/main/scala/com/twitter/finagle/http/HeaderMap.scala">HeaderMap</a>, which is now located at <code>request.headerMap</code>.</p>
-
-<p><p class="lead">
-Changing all <code>request.headers</code> calls to <code>request.headerMap</code> should be sufficient. For more examples, see these commits: <a href="https://github.com/twitter/finagle/commit/6da615a1ec2bc1dfdd8e7de0716c67590afa39d3">6da615</a>, <a href="https://github.com/twitter/finatra/commit/1dd6243fbf2fea2a3a20bbe1195f78299c0bb08c">1dd624</a> and <a href="https://github.com/twitter/finatra/commit/b95119ab5b993caeaefed851c483660f3f3fa9fb">b95119</a>.</p>
-
-<p><p class="lead">
-<strong>Note</strong>: <code>render.headers</code> is not affected by this change.</p>
-
-<p><br></p>
-
-<h2>SBT Support</h2>
-
-<p><p class="lead">
-The <a href="http://github.com/capotej/finatra-example">example app</a>, <a href="https://github.com/twitter/finatra/blob/master/build.sbt">Finatra itself</a>, and the app generator are now all SBT compatible.</p>
-
-<p><br></p>
-
-<h2>Bugfixes</h2>
-
-<p><p class="lead">
-<a href="https://github.com/BenWhitehead/finatra/commit/6fc3003acf4a22bb5ee82acba6ad15b57a5a9ad3">6fc3003</a> Add Content-Length to responses.</p>
-
-<p><p class="lead">
-<a href="https://github.com/twitter/finatra/commit/12feaf27b56755446bb330ca91caf5ee0ee26fb9">12feaf</a> Upgrade to finagle 6.10/twitter-server 1.4.0, fixing <a href="https://github.com/twitter/finatra/issues/71">#71</a>.</p>
 ]]></content>
   </entry>
   
